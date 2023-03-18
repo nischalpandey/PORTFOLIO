@@ -1,0 +1,33 @@
+{% load static %}
+<div id="navigation-bar">
+<a href="{% url 'home' %}">
+    <img src="{% static 'images/willy wonka logo.png' %}" alt="logo">
+
+</a>    <div class="menubar">
+        <span class="first-span"></span>
+        <span class="second-span"></span>
+        <span class="third-span"></span>
+    </div>
+</div>
+<div id="navigation-content">
+  <div class="logo">
+    <a href="{% url 'home' %}">
+
+        <img src="{% static 'images/willy wonka logo.png' %}" alt="logo">
+ 
+    </a>
+   
+  </div>
+  <div class="navigation-close">
+      <span class="close-first"></span>
+      <span class="close-second"></span>
+  </div>
+  <div class="navigation-links">
+      <a href="{% url 'home' %}" {% if request.path == '/' %}class='active'{% endif %}  data-text="HOME" id="home-link" >Home</a>
+      <a href="{% url 'about' %}" data-text="ABOUT" {% if request.path == '/about' %}class='active'{% endif %} id="about-link" >About</a>
+      <a href="{% url 'portfolio' %}" data-text="PORTFOLIO" {% if request.path == '/portfolio' %}class='active'{% endif %} id="portfolio-link" >Portfolio</a>
+      <a href="{% url 'contact' %}" data-text="CONTACT" {% if request.path == '/contact' %}class='active'{% endif %} id="portfolio-link" >Contact</a>
+      
+  </div>
+  
+</div>
