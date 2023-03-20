@@ -1,8 +1,11 @@
 {% load static %}
 <div id="navigation-bar">
 <a href="{% url 'home' %}">
-    <img src="{% static 'images/willy wonka logo.png' %}" alt="logo">
-
+    {% for pf in profile %}
+    {% if forloop.last == True %}
+    <img src="{{pf.img.url}}" alt="logo">
+    {% endif %} 
+    {% endfor %}
 </a>    <div class="menubar">
         <span class="first-span"></span>
         <span class="second-span"></span>
@@ -12,9 +15,11 @@
 <div id="navigation-content">
   <div class="logo">
     <a href="{% url 'home' %}">
-
-        <img src="{% static 'images/willy wonka logo.png' %}" alt="logo">
- 
+        {% for pf in profile %}
+        {% if forloop.last == True %}
+        <img src="{{pf.img.url}}" alt="logo">
+        {% endif %} 
+        {% endfor %}
     </a>
    
   </div>
@@ -29,5 +34,6 @@
       <a href="{% url 'contact' %}" data-text="CONTACT" {% if request.path == '/contact' %}class='active'{% endif %} id="portfolio-link" >Contact</a>
       
   </div>
-  
+  <a href="/admin" >Admin</a>
+      
 </div>

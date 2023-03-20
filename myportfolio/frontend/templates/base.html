@@ -40,7 +40,8 @@
         
           {% block body %}{% endblock body %}
     </div>
-
+   
+    {% if request.path != '/' %} {% include 'widgets/footer.html' %}{% endif %} 
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/particles.js' %}"></script>
     <script src="{% static 'js/particles.min.js' %}"></script>

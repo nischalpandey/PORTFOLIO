@@ -997,6 +997,7 @@ padding-bottom: 40px;
   font-size: 28px;
   font-weight: 500;
   height: 20%;
+  opacity: 0.9;
   padding: 20px;
   letter-spacing: 1px;
 }
@@ -1008,11 +1009,11 @@ padding-bottom: 40px;
     padding: 30px;
     letter-spacing: 1px;
   }
-.blogs:hover .img{
-      transform: translateY(-70%);
+.blogs:hover{
+    height: 423px;
   }
-.blogs:hover .blog-text{
-    transform: translateY(-70%);
+.blogs:hover .blog-text h3{
+    opacity: 1.2;
 }
 .blogs a{
     text-decoration: none;
@@ -1748,6 +1749,19 @@ For devices with smaller width like mobile phone
             form button:hover{
               opacity: 1;
             }
+            .mybtn{
+                padding:8px 24px;
+                font-family: poppins;
+                font-size:20px;
+                color: whitesmoke;
+                opacity: .8;
+                
+                margin: 20px;
+                cursor: pointer;
+                border: none;
+                border-radius: 8px;
+                transition: all .4s ease;
+            }
             .contact-info-header{
                 position: relative;
                 z-index: 2;
@@ -2070,7 +2084,7 @@ for tabs and large phones
                 height: auto;
             }
             .blogs .img img{
-                height: 100%;
+                height: 60%;
                 width: 100%;
                 transition: all .65s ease;
             }
@@ -2219,6 +2233,18 @@ for tabs and large phones
             }
             form button:hover{
               opacity: 1;
+            }
+            .mybtn{
+                padding:8px 24px;
+                font-family: poppins;
+                font-size:20px;
+                color: whitesmoke;
+                opacity: .8;
+                margin: 20px;
+                cursor: pointer;
+                border: none;
+                border-radius: 8px;
+                transition: all .4s ease;
             }
             .contact-info-header{
                 position: relative;
@@ -2532,6 +2558,18 @@ for tabs and large phones
         font-size: 18px;
     }
     form button{
+        padding:8px 24px;
+        font-family: poppins;
+        font-size:20px;
+        color: whitesmoke;
+        opacity: .8;
+        margin: 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        transition: all .4s ease;
+    }
+    .mybtn{
         padding:8px 24px;
         font-family: poppins;
         font-size:20px;

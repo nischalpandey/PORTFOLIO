@@ -6,6 +6,26 @@
 {% endblock tittle %}
 
 {% block body %}
-{{post.desc}}
+<h1></h1>
+<div id="portfolio">
+   
+    <div class="portfolio-header"> <span class="color"> Portfolio </span>Detail 
+    <span class ="header-caption"><span class="color"> {{data.title}}</span></span></div>
+     <div id="portfolio-content">
+         <div class="portfolio portfolio-first">
+             <div class="portfolio-image">
+                <img src="{{data.imgs.url}}" alt="portfolio-first">
+             </div>
+             <div class="portfolio-text">
+                 <h2>App Idea</h2>
+                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ut optio repellat cupiditate 
+                     expedita eius dignissimos. Id cumque placeat minima ad laudantium suscipit voluptatem ducimus</p>
+                 <div class="button"><a href="#"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
+             </div>
+         </div>
+       
+         </div>
+    
 
+     </div>
 {% endblock body%}

@@ -34,7 +34,12 @@ Nischal Pandey
   </div>
   <!--header image-->
   <div class="header-image">
-  <img src="{% static 'images/man.jpg' %}" alt="logo">
+    {% for pf in profile %}
+    {% if forloop.last == True %}
+    <img src="{{pf.bgimg.url}}" alt="logo">
+    {% endif %} 
+    {% endfor %}
+  
   </div>
   <!--header image end-->
 </div>{% endblock body %}
