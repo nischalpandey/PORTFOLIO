@@ -57,7 +57,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'myportfolio.urls'
-
+#added when deploy
+WSGI_APPLICATION = 'myportfolio.wsgi.application'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
