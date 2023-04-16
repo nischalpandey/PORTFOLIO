@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-   
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -81,7 +81,42 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myportfolio.wsgi.application'
 
+JAZZMIN_SETTINGS = {
+    # title of the window (Will default to current_admin_site.site_title if absent or None)
+    "site_title": "Admin Nischal",
 
+    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    "site_header": "Admin Nischal",
+
+    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    "site_brand": "Nischal Pandey",
+    # Welcome text on the login screen
+    "welcome_sign": "Welcome Admin",
+
+    # Copyright on the footer
+    "copyright": "Nischal Pandey",
+    # Links to put along the top menu
+     "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        # external url that opens in a new window (Permissions can be added)
+       
+        # model admin to link to (Permissions checked against model)
+        {"model": "auth.User"},
+
+    ],
+
+    #############
+    # User Menu #
+    #############
+
+    # Additional links to include in the user menu on the top right ("app" url type is not allowed)
+    "usermenu_links": [
+        {"name": "Vist SIte", "url": "https://nischalpandey.com.np", "new_window": True},
+        {"model": "auth.user"}
+    ],}
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
