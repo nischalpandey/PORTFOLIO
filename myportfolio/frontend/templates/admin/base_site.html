@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Nischal Site admin') }}{% 
+endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+<a href="{% url 'admin:index' %}">
+    Nischal
+    <!-- <img src="{% static 'logo.png' %}" height="40px" /> -->
+</a>
+ </h1>
+ {% endblock %}
+
+ {% block nav-global %}{% endblock %}
