@@ -7,9 +7,12 @@ from rest_framework.views import APIView
 import os
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
-from pathlib import Path
-@api_view(['GET'])
-def publicapi(request):
+
+from rest_framework.renderers import JSONRenderer
+class publicapi(APIView):
+ renderer_classes = [JSONRenderer]
+ def get(self,request):
+     
      portfolios =portfolio.objects.all()
      ser = PublicPortfoliosSe(portfolios, many=True)
      
@@ -21,7 +24,9 @@ def publicapi(request):
 
 class ProjectView(APIView):
   # authentication_classes = [BasicAuthentication]
+  
   permission_classes = [IsAuthenticated]
+  
   def get(self,request):
     portfolios =portfolio.objects.all()
     ser = PortfoliosSe(portfolios, many=True)
