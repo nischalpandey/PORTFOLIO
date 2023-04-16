@@ -27,7 +27,7 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-$v1((b!kz=7l$#f-5j_2uy2(03o0wg7o^=$#aj!t&byf(+(v@o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -85,6 +85,7 @@ WSGI_APPLICATION = 'myportfolio.wsgi.application'
 
 import dj_database_url
 
+
 DATABASES = {
     'default': dj_database_url.parse(env("DATABASE_URL"))
 }
@@ -136,6 +137,11 @@ import os
 STATICFILES_DIRS =[
 os.path.join(BASE_DIR,'assets')
 ]
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')

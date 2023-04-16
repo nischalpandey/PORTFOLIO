@@ -22,7 +22,7 @@ urlpatterns = [
     path('', include('frontend.urls')),
     path('api/v1/', include('apis.urls')),
     path('admin/', admin.site.urls),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
 
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,

@@ -7,12 +7,13 @@ from rest_framework.views import APIView
 import os
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
-
+from pathlib import Path
 @api_view(['GET'])
 def publicapi(request):
      portfolios =portfolio.objects.all()
      ser = PublicPortfoliosSe(portfolios, many=True)
-     return Response({"baseurl":"","data":ser.data})
+     
+     return Response({"baseurl":'',"data":ser.data})
 
 
 
