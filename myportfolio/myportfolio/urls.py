@@ -21,14 +21,14 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('frontend.urls')),
     path('api/v1/', include('apis.urls')),
-    # url('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    
     path('admin/', admin.site.urls),
 ]
 
-if settings.DEBUG:
-        urlpatterns += static(settings.MEDIA_URL,
-                              document_root=settings.MEDIA_ROOT)
 
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 from django.conf.urls import handler400
 

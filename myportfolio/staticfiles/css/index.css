@@ -58,6 +58,7 @@ body{
     width: 100%;
     background: #171717;
 }
+
 #header{
     background:#171717;
     height: 100vh;
@@ -1202,6 +1203,8 @@ form button:hover{
 }
 
 .footer{
+    position:absolute;
+    bottom:0;
     background: #080808;
     width: 100%;
     padding: 20px;
