@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('frontend.urls')),
     path('api/v1/', include('apis.urls')),
-    url('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    # url('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('admin/', admin.site.urls),
 ]
 
