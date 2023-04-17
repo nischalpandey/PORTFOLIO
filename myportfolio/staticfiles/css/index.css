@@ -1203,8 +1203,6 @@ form button:hover{
 }
 
 .footer{
-    position:absolute;
-    bottom:0;
     background: #080808;
     width: 100%;
     padding: 20px;

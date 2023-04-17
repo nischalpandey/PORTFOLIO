@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'apis',
     'frontend',
     'rest_framework'
@@ -125,7 +128,11 @@ JAZZMIN_SETTINGS = {
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dgdwhyhoj',
+    'API_KEY': '513963975965639',
+    'API_SECRET': 'SIb2H9cbS9_vlfI4_dSGexA7WJU'
+}
 import dj_database_url
 
 
@@ -188,8 +195,10 @@ STATICFILES_FINDERS = [
 
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-MEDIA_URL = 'https://cdn.nischalpandey.com.np/media/'
-MEDIA_ROOT = 'media'
+MEDIA_URL = '/media/'  # or any prefix you choose
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# MEDIA_URL = 'https://cdn.nischalpandey.com.np/media/'
+# MEDIA_ROOT = 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
