@@ -80,6 +80,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'myportfolio.wsgi.application'
+# settings.py
+
+# ...
+
+DEFAULT_FILE_STORAGE = 'myportfolio.custom_filename.NoUnderscoreStorage'
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
