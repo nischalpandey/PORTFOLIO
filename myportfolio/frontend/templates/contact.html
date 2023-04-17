@@ -18,7 +18,8 @@ contact
            <div class="form-header">
                Message Me
            </div>
-           <form id="myForm" action="#">
+           <form id="myForm" action="{% url 'contact' %}">
+            {% csrf_token %} 
               <div class="input-line">
                   <input  id="name" type="text" placeholder="Name" class="input-name">
                   <input id="email" type="email" placeholder="Email"  class="input-name">
@@ -27,7 +28,13 @@ contact
               <textarea id ="body" class="input-textarea" placeholder="message"></textarea>
               <button type="button" id ="submit" value="send">Submit</button>
            </form>
-         
+           {% if messages %}
+           <ul class="messages">
+               {% for message in messages %}
+               <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+               {% endfor %}
+           </ul>
+           {% endif %}
        </div>
       <!--Contact form-->
       <!--Contact information-->
@@ -40,7 +47,7 @@ contact
               <img src="{% static '/images/icon-name.png' %}" class="icon" alt="name-icon">
               <div class="contact-info-icon-text">
                   <h6>Name</h6>
-                  <p>Arlo Brown</p>
+                  <p>Nischal PAndey</p>
             </div>
           </div>
           <div class="contect-info-content-line">

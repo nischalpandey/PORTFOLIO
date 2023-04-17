@@ -181,8 +181,10 @@ STATICFILES_FINDERS = [
 ]
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/staticfiles/'
+MEDIA_ROOT = 'assets/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -190,9 +192,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #SMTP SETTINGS
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_USE_TLS = True
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER ='priyanshuguptacontact@gmail.com'
+EMAIL_USE_TLS = False
+EMAIL_HOST = "smtppro.zoho.com"
+EMAIL_PORT = 465
+EMAIL_HOST_USER ='admin@nischalpandey.com.np'
 EMAIL_HOST_PASSWORD = env("EMAIL_PASSWORD")
 DEFAULT_FROM_EMAIL = 'Testing <priyanshuguptacontact@gmail.com>'

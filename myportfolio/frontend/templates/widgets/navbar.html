@@ -32,8 +32,9 @@
       <a href="{% url 'about' %}" data-text="ABOUT" {% if request.path == '/about' %}class='active'{% endif %} id="about-link" >About</a>
       <a href="{% url 'portfolio' %}" data-text="PORTFOLIO" {% if request.path == '/portfolio' %}class='active'{% endif %} id="portfolio-link" >Portfolio</a>
       <a href="{% url 'contact' %}" data-text="CONTACT" {% if request.path == '/contact' %}class='active'{% endif %} id="portfolio-link" >Contact</a>
+      <a href="/admin" data-text="Amin Nischal" id="portfolio-link" >Admin</a>
       
   </div>
-  <a href="/admin" >Admin</a>
+
       
 </div>
