@@ -131,7 +131,8 @@ JAZZMIN_SETTINGS = {
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dgdwhyhoj',
     'API_KEY': '513963975965639',
-    'API_SECRET': 'SIb2H9cbS9_vlfI4_dSGexA7WJU'
+    'API_SECRET': 'SIb2H9cbS9_vlfI4_dSGexA7WJU',
+    'AUTO_DELETE': True,
 }
 import dj_database_url
 
