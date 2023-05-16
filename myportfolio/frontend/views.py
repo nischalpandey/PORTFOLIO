@@ -16,15 +16,10 @@ def contact(request):
         subject = request.POST.get("subject")
         email_from = settings.EMAIL_HOST_USER
         recipient_list = [request.POST.get("email")]
-        message = request.POST.get("name") + request.POST.get("body")
-        send_mail(
-         subject=subject,
-         message=message,
-         from_email=email_from,
-         recipient_list=recipient_list,
-         fail_silently=False,
-        )  
+        mesg = request.POST.get("name") + request.POST.get("body")
+        
         messages.success(request,  "Your Message sent." )
+        return redirect('contact')
     return render(request,'contact.html')
 
 def portfolio(request):

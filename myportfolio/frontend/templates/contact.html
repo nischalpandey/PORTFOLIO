@@ -20,7 +20,7 @@ contact
            </div>
            <form id="myForm" method="POST">
             {% csrf_token %} 
-            {{ form.as_p }}
+            
 
               <div class="input-line">
                   <input  name="name" type="text" placeholder="Name" class="input-name">
@@ -31,12 +31,13 @@ contact
               <button type="submit" id ="submit" value="submit">Submit</button>
            </form>
            {% if messages %}
-           <ul class="messages">
-               {% for message in messages %}
-               <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-               {% endfor %}
-           </ul>
-           {% endif %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
        </div>
       <!--Contact form-->
       <!--Contact information-->
