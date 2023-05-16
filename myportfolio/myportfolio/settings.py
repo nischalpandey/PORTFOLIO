@@ -63,8 +63,8 @@ MIDDLEWARE = [
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 ROOT_URLCONF = 'myportfolio.urls'
-#added when deploy
-WSGI_APPLICATION = 'myportfolio.wsgi.application'
+WSGI_APPLICATION = 'myportfolio.wsgi.app'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -82,7 +82,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'myportfolio.wsgi.application'
 # settings.py
 
 # ...
@@ -134,6 +133,12 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': 'SIb2H9cbS9_vlfI4_dSGexA7WJU',
     'AUTO_DELETE': True,
 }
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ]
+}
+
 import dj_database_url
 
 

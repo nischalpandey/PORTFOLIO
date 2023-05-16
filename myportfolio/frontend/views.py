@@ -17,7 +17,7 @@ def contact(request):
         email_from = settings.EMAIL_HOST_USER
         recipient_list = [request.POST.get("email")]
         message = request.POST.get("name") + request.POST.get("body")
-       send_mail(
+        send_mail(
          subject=subject,
          message=message,
          from_email=email_from,

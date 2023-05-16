@@ -10,7 +10,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from rest_framework.renderers import JSONRenderer
 class publicapi(APIView):
- renderer_classes = [JSONRenderer]
+#  renderer_classes = [JSONRenderer]
  def get(self,request):
      
      portfolios =portfolio.objects.all()
